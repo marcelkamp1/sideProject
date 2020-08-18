@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        sideProject irgendwas
+        sideProject
       </h1>
       <div class="links">
         <a
