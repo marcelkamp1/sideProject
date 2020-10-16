@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f3f900a3-1d98-4385-8f7f-6ed0418eab78/deploy-status)](https://app.netlify.com/sites/marcel-sideproject/deploys)
 # sideProject
 
 ## Build Setup
