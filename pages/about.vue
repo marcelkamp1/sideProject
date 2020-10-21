@@ -6,7 +6,7 @@
     <div class="mt-10 mb-10">
       <Logo />
     </div>
-    <Table />
+    <Search />
   </div>
 </template>
 
