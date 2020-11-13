@@ -2,7 +2,7 @@ import weaponList from './ammoGuide.json'
 
 export const state = () => ({
   weapons: weaponList,
-  searchedWeapon: 'MP7A1,MP7A2',
+  searchedWeapon: '-',
 })
 
 export const mutations = {
