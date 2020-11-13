@@ -1,44 +1,31 @@
 <template>
-  <div>
-    <form @submit.prevent="addElement">
-      <label for="weaponInput">Enter your weapon:</label>
-      <input id="weaponInput" v-model="weapon" placeholder="" />
-      <p></p>
-      <button class="button--green">Submit!</button>
-    </form>
-
-    <p class="mt-2 mb-2">Searched: {{ counter }} times</p>
-
-    <div class="mt-3">
-      <ul>
-        <li v-for="element in lists" :key="element">{{ element }}</li>
-      </ul>
-    </div>
+  <div class="flex-initial flex-col justify-center bg-gray-800 p-10 w-1/3">
+    <SearchMask @searchWeapon="addElement" />
+    <SearchResult :results="list" />
   </div>
 </template>
 
 <script>
+import { mapMutations, mapGetters } from 'vuex'
+
+import SearchMask from './SearchMask'
+import SearchResult from './SearchResult'
+
 export default {
-  data() {
-    return {
-      weapons: this.weapon,
-      counter: this.counter,
-      lists: [],
-    }
+  name: 'Search',
+  components: {
+    SearchMask,
+    SearchResult,
+  },
+  computed: {
+    ...mapGetters({
+      list: 'weapons/getFilteredWeapons',
+    }),
   },
   methods: {
-    addElement(weapon) {
-      if (this.weapon === undefined) {
-        alert('Weapon name is required! Please try again.')
-        return
-      } else if (this.counter >= 1) this.counter += 1
-      else {
-        this.counter = 1
-      }
-
-      this.lists.push(this.weapon)
-      this.weapon = undefined
-    },
+    ...mapMutations({
+      addElement: 'weapons/setSearchedWeapon',
+    }),
   },
 }
 </script>

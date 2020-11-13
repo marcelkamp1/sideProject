@@ -24,18 +24,13 @@ html {
   margin: 0;
 }
 
-.button--green {
+.button--white {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
+  border: 1px solid white;
+  color: white;
   text-decoration: none;
   padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
 }
 
 .button--grey {

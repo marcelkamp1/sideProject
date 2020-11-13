@@ -1,3 +1,18 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+body {
+  background-image: url('../images/soldier.jpg');
+  background-size: cover;
+  color: whitesmoke;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  color: #000
+}
